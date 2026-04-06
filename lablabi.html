@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Lablabi Tunisien</title>
+
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+
+        .header{
+            background-color: #c8102e;
+            color: white;
+            padding: 25px 10px;
+        }
+
+        h1{
+            margin: 0;
+        }
+
+        .content{
+            width: 70%;
+            margin: 40px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #c8102e;
+        }
+
+        .main-image{
+           width: 100%;
+           max-width: 600px;
+           border-radius: 15px;
+           margin-bottom: 20px;
+           box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .image-container{
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .image-container img{
+            width: 100%;
+            border-radius: 15px;
+            display: block;
+        }
+
+        .overlay{
+           position: absolute;
+           bottom: 0;
+           width: 100%;
+           background: rgba(0,0,0,0.5);
+           color: white;
+           padding: 15px;
+           font-size: 22px;
+           border-radius: 0 0 15px 15px;
+        }
+
+/* 📱 VERSION MOBILE */
+      @media screen and (max-width: 600px){
+
+        .content{
+           width: 90%;
+            }
+
+        .overlay{
+           font-size: 18px;
+           padding: 10px;
+            }
+
+        h1{
+           font-size: 22px;
+            }
+        }
+
+        ul, ol{
+            text-align: left;
+        }
+
+        .back{
+            display: block;
+            margin-top: 20px;
+            color: #c8102e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer{
+            margin-top: 60px;
+            padding: 15px;
+            background-color: #111;
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Lablabi
+            لبلابي
+        </h1>
+        <p>Un plat qui réchauffe</p>
+    </div>
+
+    <div class="content">
+
+    <div class="image-container">
+        <img src="images/lablabi.jpg" alt="Lablabi tunisien">
+        <div class="overlay">
+        Lablabi Tunisien
+        </div>
+    </div>
+
+        <h2>Ingrédients (pour 6 personnes)</h2>
+        <ul>
+            <li>700 g de pois chiches (trempés la veille)</li>
+            <li>3 litres d’eau</li>
+            <li>4 gousses d’ail</li>
+            <li>3 cuillères à soupe de cumin</li>
+            <li>Sel, poivre</li>
+            <li>1 verre d’huile d’olive</li>
+            <li>1 bol d’harissa</li>
+            <li>4 baguettes de pain</li>
+            <li>Câpres, olives, cornichons (selon goût)</li>
+            <li>Thon</li>
+            <li>6 œufs</li>
+            <li>1 citron</li>
+        </ul>
+
+        <h2>Préparation</h2>
+        <ol>
+            <li>Si les pois chiches ne sont pas prêts, les laisser tremper dans de l’eau toute une nuit.</li>
+            <li>Mettre les pois chiches dans une grande casserole (ou une cocotte).</li>
+            <li>Ajouter les 3 litres d’eau et cuire jusqu’à ce qu’ils soient très tendres.</li>
+            <li>Écraser légèrement une partie des pois chiches dans l’eau.</li>
+            <li>Ajouter l’ail râpé, mélanger et laisser cuire 5 minutes.</li>
+            <li>Ajouter le cumin, le sel et l’huile d’olive, puis cuire encore 5 minutes.</li>
+            <li>Faire cuire les oeufs dans une casserole d'eau froide, les retirer dès les premiers bouillons.</li>
+            <li>Dans un bol, émietter le pain.</li>
+            <li>Verser la sauce avec les pois chiches.</li>
+            <li>Ajouter l’harissa, l’œuf, le thon, les olives, câpres et citron.</li>
+            <li>Mélanger et ajouter un filet d’huile d’olive.</li>
+        </ol>
+
+    </div>
+
+    <a href="sale.html" class="back">⬅ Retour aux recettes salées</a>
+
+    <div class="footer">
+        © 2026 - SamayMLK
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Recettes Salées</title>
+
+<style>
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* HEADER */
+.header{
+    background-color: #c8102e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* MENU BURGER */
+.menu-icon{
+    font-size: 28px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.mobile-menu{
+    display: none;
+    background: #c8102e;
+}
+
+.mobile-menu a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+}
+
+/* SEARCH */
+.search{
+    text-align: center;
+    margin: 20px;
+}
+
+.search input{
+    width: 60%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* GRID */
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* CARD */
+.card{
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.card:hover img{
+    transform: scale(1.1);
+}
+
+.card-content{
+    padding: 15px;
+    text-align: center;
+}
+
+.card a{
+    text-decoration: none;
+    color: #c8102e;
+    font-weight: bold;
+}
+
+/* FAVORITE */
+.heart{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+.footer{
+    margin-top: 40px;
+    padding: 15px;
+    background-color: #111;
+    color: white;
+    text-align: center;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+    .search input{
+        width: 90%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <h1>Recettes salées tunisiennes</h1>
+</div>
+
+<div class="mobile-menu" id="menu">
+    <a href="index.html">Accueil</a>
+    <a href="sale.html">Salé</a>
+    <a href="sucre.html">Sucré</a>
+    <a href="international.html">🌍 International</a>
+</div>
+
+<div class="search">
+    <input type="text" id="searchInput" placeholder="🔍 Rechercher une recette...">
+</div>
+
+<div class="container" id="recipes">
+
+<div class="card" data-name="couscous">
+    <span class="heart" onclick="toggleFav(this)">🤍</span>
+    <img src="images/couscous.jpg">
+    <div class="card-content">
+        <a href="couscous.html">🥘 Couscous</a>
+    </div>
+</div>
+
+<div class="card" data-name="lablabi">
+    <span class="heart" onclick="toggleFav(this)">🤍</span>
+    <img src="images/lablabi.jpg">
+    <div class="card-content">
+        <a href="lablabi.html">🍲 Lablabi</a>
+    </div>
+</div>
+
+<div class="card" data-name="tajine">
+    <span class="heart" onclick="toggleFav(this)">🤍</span>
+    <img src="images/tajine.png">
+    <div class="card-content">
+        <a href="tajine.html">🍳 Tajine</a>
+    </div>
+</div>
+
+<div class="card" data-name="kefteji">
+    <span class="heart" onclick="toggleFav(this)">🤍</span>
+    <img src="images/kefteji.jpg">
+    <div class="card-content">
+        <a href="kefteji.html">🍳 Kefteji</a>
+    </div>
+</div>
+
+</div>
+
+<div class="footer">
+    © 2026 - SamayMLK
+</div>
+
+<script>
+
+/* MENU */
+function toggleMenu(){
+    let menu = document.getElementById("menu");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+
+/* SEARCH */
+document.getElementById("searchInput").addEventListener("keyup", function(){
+    let value = this.value.toLowerCase();
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        let name = card.getAttribute("data-name");
+        card.style.display = name.includes(value) ? "block" : "none";
+    });
+});
+
+/* FAVORITES */
+function toggleFav(el){
+    let card = el.parentElement;
+    let name = card.getAttribute("data-name");
+
+    let favs = JSON.parse(localStorage.getItem("favorites")) || [];
+
+    if(favs.includes(name)){
+        favs = favs.filter(f => f !== name);
+        el.textContent = "🤍";
+    } else {
+        favs.push(name);
+        el.textContent = "❤️";
+    }
+
+    localStorage.setItem("favorites", JSON.stringify(favs));
+}
+
+/* LOAD FAVORITES */
+window.onload = function(){
+    let favs = JSON.parse(localStorage.getItem("favorites")) || [];
+
+    document.querySelectorAll(".card").forEach(card => {
+        let name = card.getAttribute("data-name");
+        if(favs.includes(name)){
+            card.querySelector(".heart").textContent = "❤️";
+        }
+    });
+};
+
+</script>
+
+</body>
+</html>
