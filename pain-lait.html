@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Pains au lait aux pépites de chocolat</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f5f5f5;
+    text-align:center;
+}
+
+.header{
+    background:#c8102e;
+    color:white;
+    padding:25px;
+}
+
+.container{
+    width:70%;
+    margin:40px auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+/* IMAGE */
+.image-container{
+    position:relative;
+}
+
+.image-container img{
+    width: 60%;
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.overlay{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 500px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+/* VIDEO */
+.video{
+    margin-top:30px;
+}
+
+iframe{
+    width:100%;
+    height:400px;
+    border-radius:10px;
+}
+
+/* FOOTER */
+.footer{
+    margin-top:40px;
+    padding:20px;
+    background:#111;
+    color:white;
+    font-size:14px;
+}
+
+a{
+    color:#c8102e;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.btn-video{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 20px;
+    background:#c8102e;
+    color:white;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn-video:hover{
+    background:#a50d24;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+    .container{
+        width:90%;
+    }
+
+    iframe{
+        height:250px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>🥐 Les meilleurs pains au lait aux pépites de chocolat</h1>
+</div>
+
+<div class="container">
+
+    <!-- IMAGE -->
+    <div class="image-container">
+        <img src="images/pain-lait.png" alt="Pains au lait">
+        <div class="overlay">Moelleux et délicieux 😍</div>
+    </div>
+
+    <h2>🍽️ Ingrédients (10 brioches)</h2>
+    <ul style="text-align:left;">
+        <li>450g de farine</li>
+        <li>260 ml de lait chaud</li>
+        <li>60g de beurre fondu ou mou</li>
+        <li>7g de levure boulangère</li>
+        <li>3 cuillères à soupe de sucre</li>
+        <li>1 cuillère à soupe de levure chimique</li>
+        <li>Une pincée de sel</li>
+        <li>150g de pépites de chocolat</li>
+        <li>8g de vanille en poudre</li>
+        <li>4 cuillères à soupe de lait (glaçage)</li>
+    </ul>
+
+    <h2>👩‍🍳 Préparation</h2>
+    <ol style="text-align:left;">
+        <li>Mélanger le lait chaud avec la levure boulangère, le sucre, le beurre et la vanille.</li>
+        <li>Laisser reposer 10 minutes jusqu’à obtenir un mélange mousseux.</li>
+        <li>Ajouter la levure chimique et le sel.</li>
+        <li>Pétrir jusqu’à obtenir une pâte lisse et élastique.</li>
+        <li>Ajouter les pépites de chocolat et bien mélanger.</li>
+        <li>Placer la pâte dans un saladier graissé, couvrir et laisser lever 1 heure.</li>
+        <li>Diviser en 10 portions et former des boules.</li>
+        <li>Déposer sur papier sulfurisé, couvrir et laisser lever 20 minutes.</li>
+        <li>Préchauffer le four à 190°C.</li>
+        <li>Badigeonner avec du lait et cuire 20 à 25 minutes.</li>
+        <li>À la sortie du four, badigeonner à nouveau de lait.</li>
+    </ol>
+
+    <div class="video">
+    <h2>🎥 Vidéo de la recette</h2>
+
+    <a href="https://pin.it/5bzAs1xCb" target="_blank" class="btn-video">
+        ▶ Regarder la vidéo
+    </a>
+    </div>
+
+    <video controls width="20%">
+        <source src="videos/pain-lait.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+    </video>
+    </div>
+
+    <!-- SOURCE -->
+    <div style="margin-top:40px; text-align:left;">
+        <h3>📌 Source originale</h3>
+        <p>
+            Cette recette a été traduite et adaptée à partir d’un site en anglais, testée et simplifiée pour une meilleure compréhension.
+        </p>
+        <p>
+            🔗 <a href="https://bestdessertrecipe.com/the-fluffiest-chocolate-chip-milk-buns-ever-a-heavenly-treat/?utm_source=Pinterest&utm_medium=organic" target="_blank">
+            Voir la recette originale ici
+            </a>
+        </p>
+    </div>
+
+    <a href="monde.html">⬅ Retour aux recettes du monde</a>
+
+</div>
+
+<div class="footer">
+    © 2026 - SamayMLK
+</div>
+
+</body>
+</html>
