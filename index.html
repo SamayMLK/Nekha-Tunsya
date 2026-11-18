@@ -1,88 +1,125 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="utf-8">
-    <title>نكهة تونسية</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nekha Tunsya — Recettes tunisiennes & saveurs du monde</title>
+  <meta name="description" content="Recettes tunisiennes authentiques et saveurs du monde, testées et approuvées. Tajine, lablabi, nwasser, pains au lait et bien plus.">
 
-    <style>
-        body{
-            margin: 0;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f5f5f5;
-        }
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;500&display=swap" rel="stylesheet">
 
-        /* Header */
-        .header{
-            background-color: #c8102e; /* rouge tunisien */
-            color: white;
-            padding: 30px 10px;
-        }
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%B2%3C/text%3E%3C/svg%3E">
 
-        h1{
-            margin: 0;
-            font-size: 32px;
-        }
-
-        p{
-            margin-top: 10px;
-            font-size: 18px;
-        }
-
-        /* Container */
-        .container{
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .box{
-            width: 260px;
-            padding: 15px;
-            border-radius: 12px;
-            background-color: white;
-            border: 2px solid #c8102e;
-            text-decoration: none;
-            color: #c8102e;
-            font-weight: bold;
-            font-size: 22px;
-            transition: 0.3s;
-        }
-
-        .box:hover{
-            background-color: #c8102e;
-            color: white;
-        }
-
-        /* Footer */
-        .footer{
-            margin-top: 350px;
-            padding: 15px;
-            background-color: #111;
-            color: white;
-            font-size: 14px;
-        }
-    </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <div class="header">
-        <h1>🇹🇳 نكهة تونسية 🇹🇳</h1>
-        <p>Découvrez les saveurs traditionnelles de la cuisine tunisienne</p>
+  <!-- ============================ TOP BAR ============================ -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+      <a href="index.html" class="brand">
+        <span class="brand-mark">🍲</span>
+        <span>Nekha Tunsya</span>
+        <span class="brand-ar" id="brandAr"></span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="active">Accueil</a>
+        <a href="index.html#recettes">Recettes</a>
+        <a href="index.html#apropos">À propos</a>
+      </nav>
+      <div class="search-wrap">
+        <span class="icon">🔍</span>
+        <input type="search" id="searchInput" placeholder="Rechercher une recette…" autocomplete="off">
+      </div>
     </div>
+  </header>
 
+  <!-- ============================ HERO ============================ -->
+  <section class="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="eyebrow">Recettes & saveurs</span>
+      <h1>
+        Nekha Tunsya
+        <span class="ar" id="heroTitleAr">نكهة تونسية</span>
+      </h1>
+      <p class="lead">Des recettes tunisiennes authentiques et des saveurs du monde, testées en cuisine et partagées avec amour.</p>
+      <a href="#recettes" class="hero-cta">Découvrir les recettes <span class="arrow">→</span></a>
+    </div>
+    <div class="hero-scroll">Scroll ↓</div>
+  </section>
+
+  <!-- ============================ RECETTES ============================ -->
+  <section id="recettes">
     <div class="container">
-        <a href="sale.html" class="box">🍲 Recettes Salées</a>
-        <a href="sucre.html" class="box">🍰 Recettes Sucrées</a>
-        <a href="international.html" class="box">🌍 Recettes non tunisiennes</a>
-</div>
-    </div>
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Toutes les recettes</span>
+          <h2>Une cuisine de famille, généreuse et colorée</h2>
+        </div>
+        <p class="lead">Choisissez une catégorie ou cherchez par ingrédient — chaque recette a été cuisinée, goûtée et validée.</p>
+      </div>
 
-    <div class="footer">
-        © 2026 - SamayMLK
-    </div>
+      <!-- Filtres -->
+      <div class="filters" id="filterBar"></div>
 
+      <!-- Grille de cartes -->
+      <div class="grid" id="recipeGrid">
+        <div class="empty-state">
+          <div class="icon">⏳</div>
+          <p>Chargement des recettes…</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ À PROPOS ============================ -->
+  <section class="about" id="apropos">
+    <div class="container">
+      <div class="about-inner">
+        <span class="eyebrow">À propos</span>
+        <h2>Une cuisine qui voyage entre la Tunisie et le monde</h2>
+        <p>
+          Nekha Tunsya, c'est un carnet de cuisine personnel : des plats tunisiens appris en famille, des recettes du monde testées le week-end, et toujours l'envie de partager. Pas de publicité, pas de pub pour des robots cuisine — juste des recettes qui marchent, expliquées simplement.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="brand">
+            <span class="brand-mark">🍲</span>
+            <span>Nekha Tunsya</span>
+            <span class="brand-ar">نكهة تونسية</span>
+          </div>
+          <p class="footer-tagline">Recettes tunisiennes et saveurs du monde, cuisinées avec amour.</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Accueil</a>
+          <a href="index.html#recettes">Recettes</a>
+          <a href="index.html#apropos">À propos</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> SamayMLK — Tous droits réservés.</span>
+        <span>Fait avec ♥ et beaucoup d'harissa.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="js/app.js"></script>
 </body>
 </html>

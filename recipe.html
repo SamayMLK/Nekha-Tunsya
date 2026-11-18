@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recette — Nekha Tunsya</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%B2%3C/text%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============================ TOP BAR ============================ -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+      <a href="index.html" class="brand">
+        <span class="brand-mark">🍲</span>
+        <span>Nekha Tunsya</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html">Accueil</a>
+        <a href="index.html#recettes">Recettes</a>
+        <a href="index.html#apropos">À propos</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================ RECIPE MOUNT ============================ -->
+  <main id="recipeMount">
+    <div class="loading">
+      <div style="font-size:36px;margin-bottom:12px">⏳</div>
+      <p>Chargement de la recette…</p>
+    </div>
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="brand">
+            <span class="brand-mark">🍲</span>
+            <span>Nekha Tunsya</span>
+            <span class="brand-ar">نكهة تونسية</span>
+          </div>
+          <p class="footer-tagline">Recettes tunisiennes et saveurs du monde, cuisinées avec amour.</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Accueil</a>
+          <a href="index.html#recettes">Recettes</a>
+          <a href="index.html#apropos">À propos</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> SamayMLK — Tous droits réservés.</span>
+        <span>Fait avec ♥ et beaucoup d'harissa.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="js/app.js"></script>
+</body>
+</html>

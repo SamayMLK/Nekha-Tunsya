@@ -1,0 +1,169 @@
+{
+  "site": {
+    "name": "Nekha Tunsya",
+    "nameArabic": "نكهة تونسية",
+    "tagline": "Recettes tunisiennes & saveurs du monde",
+    "author": "SamayMLK",
+    "year": "2026"
+  },
+  "categories": [
+    { "id": "sale",         "label": "Salé tunisien",   "icon": "🍲" },
+    { "id": "sucre",        "label": "Sucré tunisien",   "icon": "🍰" },
+    { "id": "international","label": "International",   "icon": "🌍" }
+  ],
+  "recipes": [
+    {
+      "id": "tajine",
+      "title": "Tajine tunisien",
+      "titleArabic": "",
+      "category": "sale",
+      "image": "images/tajine.png",
+      "tagline": "Se mange tiède, voire froid, en accompagnement.",
+      "servings": "Moule 23 × 31 cm",
+      "servingsLabel": "Moule",
+      "prepTime": "20 min",
+      "cookTime": "30 min",
+      "difficulty": "Facile",
+      "ingredients": [
+        "16 œufs",
+        "Fromage (triangle ou tartinable)",
+        "200 g de fromage râpé",
+        "4 pommes de terre",
+        "2 oignons",
+        "2 cuillères à café de levure chimique",
+        "Olives en rondelles",
+        "Quelques branches de persil haché finement",
+        "Sel, poivre, curcuma (2 cuillères à café de chaque)",
+        "Harissa ou piment en poudre",
+        "Thon, poulet, poisson blanc ou viande hachée (poisson et viande déjà cuits)"
+      ],
+      "steps": [
+        "Couper les pommes de terre en petits cubes (comme des mini frites).",
+        "Les faire frire, cuire à l'eau ou à l'air fryer selon votre préférence.",
+        "Faire cuire les oignons à l'étouffée jusqu'à ce qu'ils deviennent fondants.",
+        "Préchauffer le four à 180 °C (chaleur tournante).",
+        "Dans un grand saladier, casser les œufs et les battre.",
+        "Ajouter les pommes de terre, les oignons, le fromage (écrasé) et le fromage râpé.",
+        "Ajouter les épices, la viande ou le poisson, la levure, les olives et le persil finement haché.",
+        "Mélanger puis verser dans un moule.",
+        "Cuire environ 30 minutes jusqu'à ce que le tajine soit bien doré.",
+        "Laisser tiédir avant de découper."
+      ],
+      "notes": "Se déguste aussi bien chaud que froid, en entrée ou en plat."
+    },
+    {
+      "id": "lablabi",
+      "title": "Lablabi",
+      "titleArabic": "لبلابي",
+      "category": "sale",
+      "image": "images/lablabi.jpg",
+      "tagline": "Un plat qui réchauffe, star des hivers tunisiens.",
+      "servings": "6 personnes",
+      "prepTime": "15 min",
+      "cookTime": "1 h 30",
+      "difficulty": "Moyenne",
+      "ingredients": [
+        "700 g de pois chiches (trempés la veille)",
+        "3 litres d'eau",
+        "4 gousses d'ail",
+        "3 cuillères à soupe de cumin",
+        "Sel, poivre",
+        "1 verre d'huile d'olive",
+        "1 bol d'harissa",
+        "4 baguettes de pain",
+        "Câpres, olives, cornichons (selon goût)",
+        "Thon",
+        "6 œufs",
+        "1 citron"
+      ],
+      "steps": [
+        "Si les pois chiches ne sont pas prêts, les laisser tremper dans de l'eau toute une nuit.",
+        "Mettre les pois chiches dans une grande casserole (ou une cocotte).",
+        "Ajouter les 3 litres d'eau et cuire jusqu'à ce qu'ils soient très tendres.",
+        "Écraser légèrement une partie des pois chiches dans l'eau.",
+        "Ajouter l'ail râpé, mélanger et laisser cuire 5 minutes.",
+        "Ajouter le cumin, le sel et l'huile d'olive, puis cuire encore 5 minutes.",
+        "Faire cuire les œufs dans une casserole d'eau froide, les retirer dès les premiers bouillons.",
+        "Dans un bol, émietter le pain.",
+        "Verser la sauce avec les pois chiches.",
+        "Ajouter l'harissa, l'œuf, le thon, les olives, câpres et citron.",
+        "Mélanger et ajouter un filet d'huile d'olive."
+      ],
+      "notes": "Plat de rue par excellence à Tunis : à déguster bien chaud dans un bol, les doigts légèrement mouillés."
+    },
+    {
+      "id": "nwasser",
+      "title": "Nwasser",
+      "titleArabic": "",
+      "category": "sale",
+      "image": "images/nwasser.png",
+      "tagline": "Pâtes carrées mijotées, un classique familial.",
+      "servings": "6 à 10 personnes",
+      "prepTime": "15 min",
+      "cookTime": "45 min",
+      "difficulty": "Facile",
+      "ingredients": [
+        "1 kg de Nwasser",
+        "800 g de viande rouge ou poulet",
+        "2 oignons",
+        "2 cuillères à soupe de concentré de tomate",
+        "1 cuillère à soupe d'harissa",
+        "Huile d'olive",
+        "Sel, poivre",
+        "Curcuma",
+        "Pois chiches"
+      ],
+      "steps": [
+        "Faire revenir l'oignon dans l'huile d'olive.",
+        "Ajouter la viande et laisser dorer.",
+        "Ajouter le concentré de tomate, l'harissa et les épices.",
+        "Ajouter de l'eau et les pois chiches puis laisser cuire.",
+        "Cuire les nwasser à la vapeur (couscoussier).",
+        "Mélanger les pâtes avec la sauce.",
+        "Laisser mijoter quelques minutes avant de servir."
+      ],
+      "notes": "Photo à venir — n'hésitez pas à m'envoyer la vôtre pour illustrer cette recette."
+    },
+    {
+      "id": "pain-lait",
+      "title": "Pains au lait aux pépites de chocolat",
+      "titleArabic": "",
+      "category": "international",
+      "image": "images/pain-lait.png",
+      "tagline": "Moelleux et délicieux, parfaits pour le goûter.",
+      "servings": "10 brioches",
+      "prepTime": "30 min",
+      "cookTime": "20 à 25 min",
+      "difficulty": "Moyenne",
+      "ingredients": [
+        "450 g de farine",
+        "260 ml de lait chaud",
+        "60 g de beurre fondu ou mou",
+        "7 g de levure boulangère",
+        "3 cuillères à soupe de sucre",
+        "1 cuillère à soupe de levure chimique",
+        "Une pincée de sel",
+        "150 g de pépites de chocolat",
+        "8 g de vanille en poudre",
+        "4 cuillères à soupe de lait (réservées pour le glaçage)"
+      ],
+      "steps": [
+        "Mélanger le lait chaud avec la levure boulangère, le sucre, le beurre et la vanille.",
+        "Laisser reposer 10 minutes jusqu'à obtenir un mélange mousseux.",
+        "Ajouter la farine, la levure chimique et le sel.",
+        "Pétrir jusqu'à obtenir une pâte lisse et élastique.",
+        "Ajouter les pépites de chocolat et bien mélanger.",
+        "Placer la pâte dans un saladier graissé, couvrir et laisser lever 1 heure.",
+        "Diviser en 10 portions et former des boules.",
+        "Déposer sur papier sulfurisé, couvrir et laisser lever 20 minutes.",
+        "Préchauffer le four à 190 °C.",
+        "Badigeonner avec du lait et cuire 20 à 25 minutes.",
+        "À la sortie du four, badigeonner à nouveau de lait. Laisser les petits pains refroidir légèrement avant de servir."
+      ],
+      "video": "videos/pain-lait.mp4",
+      "videoUrl": "https://pin.it/5bzAs1xCb",
+      "sourceUrl": "https://bestdessertrecipe.com/the-fluffiest-chocolate-chip-milk-buns-ever-a-heavenly-treat/",
+      "sourceNote": "Recette traduite et adaptée d'un site anglais, testée et simplifiée pour une meilleure compréhension."
+    }
+  ]
+}
